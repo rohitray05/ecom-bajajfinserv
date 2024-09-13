@@ -1,0 +1,21 @@
+<p>product-listing-page works!</p>
+<div id="category-filter">
+  <span>Filter By Category</span>
+  <select id="category-dropdown" (change)="onCategoryChange($event)" [value]="selectedCategory">
+    <option *ngFor="let option of cateGoryFilter" [value]="option.value">
+      {{ option.label }}
+    </option>
+  </select>
+
+  <span>Filter by Price</span>
+</div>
+
+
+    
+<button>Sort</button>
+
+
+  <div class="product-list" *ngFor="let product of displayProducts">
+    <app-product [product]="product" (productSelected)="productSelected($event)"></app-product>
+  </div>
+

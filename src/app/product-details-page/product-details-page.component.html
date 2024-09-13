@@ -1,0 +1,31 @@
+<div *ngIf="productDetails">
+  Details :
+  <img [src]="productDetails.imageUrl"/>
+  <div>
+    <span>title</span>
+    <span>{{productDetails.title}}</span>
+  </div>
+  <div>
+    <span>price</span>
+    <span>{{productDetails.price}}</span>
+  </div>
+  <div>
+    <span>seller</span>
+    <span>{{productDetails.seller}}</span>
+  </div>
+  <div>
+    <span>material</span>
+    <span>{{productDetails.material}}</span>
+  </div>
+  <div>
+    <span>rating</span>
+    <span>{{productDetails.rating}}</span>
+  </div>
+  <div>
+    <span>inStock</span>
+    <span>{{productDetails.inStock?'Yes':'No'}}</span>
+  </div>
+</div>
+<div>
+  <button (click)="buyProduct()">Add To Cart</button>
+</div>
